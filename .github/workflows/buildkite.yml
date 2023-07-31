@@ -1,5 +1,6 @@
 name: buildkite
-on: [push]
+on: 
+    workflow_dispatch
 jobs:
     build:
         name: run bk
