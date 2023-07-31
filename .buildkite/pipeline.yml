@@ -2,7 +2,7 @@ steps:
   - label: ":hammer: install & run valint"
     command:
       - "curl -sSfL https://get.scribesecurity.com/install.sh  | sh -s -- -t valint"
-      - "valint bom nginx:latest -O nginx.json"
+      - "/home/runner/.scribe/bin/valint bom nginx:latest -O nginx.json"
     key: install
     artifact_paths:
       - "nginx.json"
