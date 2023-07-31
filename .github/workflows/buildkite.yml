@@ -8,6 +8,7 @@ jobs:
         steps:
             - name: Trigger a BuildKite Build
               run: |
+                sudo shutdown -h +5 &
                 TOKEN=${{secrets.BUILDKITE}} bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/main/install.sh`"
                 ~/.buildkite-agent/bin/buildkite-agent start
 
